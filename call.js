@@ -15,7 +15,7 @@ function init() {
         return;
     }
     peer = new Peer(userId,{    //available in peer js file
-        host: 'localhost',
+        host: 'https://rajat1311973.github.io/Video-Call-App',
         port: 9000,
         path: '/video'
     })

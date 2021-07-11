@@ -26,7 +26,7 @@ let localStream
 function listen() {     //function to pick the call
     peer.on('call', (call) => {
         navigator.getUserMedia({
-            audio: true, 
+            audio: true,
             video: {
                 frameRate: 24,
                 width: {
@@ -40,8 +40,6 @@ function listen() {     //function to pick the call
             call.answer(stream)
             call.on('stream', (remoteStream) => {
                 remoteVideo.srcObject = remoteStream
-                // remoteVideo.className = "primary-video"
-                // localVideo.className = "secondary-video"
             })
         })
     })
@@ -64,12 +62,9 @@ function startCall() {  //function to start call
             aspectRatio: 1.33333
         }
     }, (stream) => {
-
         localVideo.srcObject = stream
         localStream = stream
-
         const call = peer.call(otherUserId, stream)
-        notify("Waiting for friend to join..")
         call.on('stream', (remoteStream) => {
             remoteVideo.srcObject = remoteStream
         })
@@ -94,5 +89,6 @@ document.getElementById("mutevideo").addEventListener("click", () => {
     document.getElementById("mutevideo").style.background = 'red';
 })
 document.getElementById("EndCall").addEventListener("click", () => {
-    
+    document.getElementById("wrapper_id").style.display = "block";
+    document.getElementById("call_id").style.display = "none";
 })

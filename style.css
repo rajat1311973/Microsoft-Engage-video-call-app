@@ -146,20 +146,18 @@ h1 {
     height: 100vh;
 }
 .amute{
-    float: left;
-/* color:white; */
     width : 110px;
+    display: inline-block;
     background: #5f6368;
 }
 .vmute{
-  /* margin: left 90px; */
-  margin-left: 100px;
     width : 110px;
+    display: inline-block;
     background: #5f6368;
 }
 .end{
-  float: right;
   width : 110px;
+  display: inline-block;
   background: #5f6368;
 }
 .muteB{
@@ -168,7 +166,11 @@ h1 {
 	position: absolute;
 	top: 30rem;
 	/* bottom: 0; */
-	left: 100px;
+	left: 10px;
 	right: 100px;
 	margin: auto;
+}
+#muteb{
+  width:100%;
+    text-align: center;
 }

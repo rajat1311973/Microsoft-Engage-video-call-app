@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script src="./peerjs.js"></script>
+    <div class="container" id="wrapper_id">
+        <div class="brand-logo"></div>
+        <div class="inputs">
+            <label>Enter Your Unique Id</label>
+            <input type="text" id="userid" />
+            <label>Enter your Friend's Unique Id</label>
+            <input type="text" id="fid"/>
+            <div class="button_container">
+                <button type="submit" class="b1" onclick="init()">Connect To Server</button>
+                <!-- <button type="submit" class="b3" onclick="startCall()">Start Audio Call</button> -->
+                <button type="submit" class="b2" onclick="startCall()">Start Video Call</button>
+            </div>
+        </div>
+    </div>
+    <div class="call" id = "call_id">
+        <div class="row">
+            <video class="primary-video" autoplay muted id="local-video"></video>
+            <video class="secondary-video" autoplay id="remote-video"></video>
+        </div>
+        <!-- <button class= -->
+            <div class="muteB">
+            <button type="button" id = "muteaudio" class="amute" >Mute Audio</button>
+            <button type="button" id = "mutevideo" class="vmute" >Mute Video</button>
+            <button type="button" id="EndCall" class="end">End Call</button>
+            <!-- <button type="button" id="mutevideo" class="vmute">Mute Video</button> -->
+            </div>
+    </div>
+    <script src="./call.js"></script>
+</body>
+
+</html>

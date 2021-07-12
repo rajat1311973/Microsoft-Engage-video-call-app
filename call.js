@@ -15,7 +15,7 @@ function init() {
         return;
     }
     peer = new Peer(userId,{    //available in peer js file
-        host: 'https://rajat1311973.github.io/Video-Call-App',
+        host: '192.168.0.103',
         port: 9000,
         path: '/video'
     })
@@ -25,6 +25,8 @@ function init() {
 let localStream
 function listen() {     //function to pick the call
     peer.on('call', (call) => {
+        document.getElementById("wrapper_id").style.display = "none";
+        document.getElementById("call_id").style.display = "block";
         navigator.getUserMedia({
             audio: true,
             video: {
